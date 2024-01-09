@@ -1,10 +1,7 @@
-Welcome to Lumache's documentation!
+Welcome to PhIAT's documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+Phase imaging analysis tool (PhIAT) is an analysis tool for the phase-imaging ion-cyclotron-resonance mass spectrometry technique. PhIAT was originally created by Sam Porter and updated by Annabelle Czihaly.
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
@@ -20,5 +17,3 @@ Contents
 
    usage
    api
-
-Lumache has its documentation hosted on Read the Docs.
