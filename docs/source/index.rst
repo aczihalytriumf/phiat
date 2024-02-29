@@ -15,5 +15,8 @@ Contents
 
 .. toctree::
 
+   piicr_basics
+   simulated_data_generation
    usage
+   help
    api
