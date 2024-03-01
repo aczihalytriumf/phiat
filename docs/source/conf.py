@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'PhIAT'
-copyright = '2021, Graziella'
+copyright = '2024, Annabelle Czihaly'
 author = 'Graziella'
 
 release = '0.1'
