@@ -4,7 +4,7 @@
 
 project = 'PhIAT'
 copyright = '2024, Annabelle Czihaly'
-author = 'Graziella'
+author = 'Annabelle'
 
 release = '0.1'
 version = '0.1.0'
