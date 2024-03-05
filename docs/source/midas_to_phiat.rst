@@ -1,5 +1,6 @@
-Overview
------
+midas_to_phiat.py Overview
+###########
+
 * Converts MIDAS files from MPET DAQ to PhIAT-compatible format
 * Written in Python
 * Input: directory to MIDAS files (.mid.lz4)
@@ -9,8 +10,29 @@ Overview
    * .csv files containing approximate count rates
    * One .csv file containing an address list of converted MIDAS files, their accumulations times (Taccs) and reference files assignments
 
+Background
+**********
+
+Four pieces of information are important and relevent for PI-ICR analysis and they are 
+
+#. x position (mm)
+#. y position (mm)
+#. time of flight (s)
+    * from extraction to detector
+#. trigger (integer) or timestamp (s)
+    * CAEN: trigger
+       * Trigger number an ion hit came during (starting from 0 at file beginning)
+    * VT2: timestamp
+       * Timestamp of event relative to initial trigger time
+
+What is <part of subject> ?
+============================
+
+(info here if i want)
+
 Initialization
------
+**********
+
 * On Line 20: Change the address in sys.path.append from '/Users/wsporter/Documents/Physics_Research/TITAN/PIICR_Analysis/titan_data' to the local address of titan_data on your computer
    * Download titan_data: https://bitbucket.org/ttriumfdaq/titan_data/src/master/
    * Example: sys.path.append('/Users/aczihaly/Documents/PIICR_Analysis/titan_data')
@@ -22,16 +44,5 @@ Initialization
 * testing: If you are using test data from MIDAS that DOES NOT include a reference file (i.e. a Tacc of 0), set to TRUE (automatically assigns the last file a Tacc of 0, as needed to run through the script)
    * Otherwise, set to FALSE (the default for normal data)
 
-Data
------
-4 pieces of information are important:
+Following the steps, you are now ready to use midas_to_phiat.py automatically as part of PhIAT or independently. 
 
-#. x position (mm)
-#. y position (mm)
-#. time of flight (s)
-    * from extraction to detector
-#. trigger (integer) or timestamp (s)
-    * CAEN: trigger
-       * Trigger number an ion hit came during (starting from 0 at file beginning)
-    * VT2: timestamp
-       * Timestamp of event relative to initial trigger time
