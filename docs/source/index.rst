@@ -17,6 +17,7 @@ Contents
 
    piicr_basics
    simulated_data_generation
+   midas_to_phiat
    usage
    help
    api
