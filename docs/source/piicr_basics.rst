@@ -3,6 +3,11 @@ Phase-Imagaing Ion-Cyclotron-Resonance (PI-ICR) Basics
 
 The PI-ICR technique is a precision mass spectrometry technique. It determines the cyclotron frequency by finding the phase difference between ion clusters of different accumulation times projected on a position-sensitive detector.
 
+Theory
+**********
+
+formulas here
+
 Measurement Technique
 **********
 
@@ -21,4 +26,4 @@ Measurement Technique
    * Quadrupolar pulse to convert motion to magnetron motion (smearing effect if extract at reduced cyclotron)
    * Extract ions towards detector
 
-This procedure will result in 3 spots or clusters: center, magnetron, and reduced cyclotron. Next, PhIAT determines the phase between the magnetron and reduced cyclotron spots. 
+This procedure will result in 3 spots/ clusters: center, magnetron, and reduced cyclotron. 
