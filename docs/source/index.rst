@@ -3,7 +3,7 @@ Welcome to PhIAT's documentation!
 
 Phase-imaging analysis tool (PhIAT) is an analysis tool for the phase-imaging ion-cyclotron-resonance mass spectrometry technique. PhIAT was originally created by Sam Porter and updated by Annabelle Czihaly.
 
-Check out the :doc:`usage` section for further information, including
+Check out the :doc:`automatic_fitting` section to get started, including
 how to :ref:`installation` the project.
 
 .. note::
@@ -18,6 +18,6 @@ Contents
    piicr_basics
    simulated_data_generation
    midas_to_phiat
-   usage
+   automatic_fitting
    help
    api
