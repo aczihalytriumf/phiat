@@ -14,7 +14,7 @@ Background
 ========
 
 
-Four pieces of information are important and relevent for PI-ICR analysis and they are 
+Four pieces of information are important and relevent for PI-ICR analysis:
 
 - x position (mm)
 - y position (mm)
