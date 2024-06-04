@@ -11,7 +11,7 @@ midas_to_phiat.py Overview
   - One .csv file containing an address list of converted MIDAS files, their accumulation times (Taccs), and reference files assignments
 
 Background
-**********
+-----
 
 
 Four pieces of information are important and relevent for PI-ICR analysis:
@@ -27,7 +27,7 @@ Four pieces of information are important and relevent for PI-ICR analysis:
     - Timestamp of event relative to initial trigger time
 
 Initialization
-**********
+-----
 
 - Download titan_data: https://bitbucket.org/ttriumfdaq/titan_data/src/master/
 - On Line 20: Change the address in sys.path.append from '/Users/wsporter/Documents/Physics_Research/TITAN/PIICR_Analysis/titan_data' to the local address of titan_data on your computer
@@ -43,7 +43,7 @@ Initialization
 Following the steps, you are now ready to use midas_to_phiat.py automatically as part of PhIAT (see PhIAT documentation for further detail) or separately in a command line.
 
 Data -- CAEN 25ps TDC
-============================
+-----
 
 - **X/Y Position:** Determined via timing pulses in delay line anode
   - Correspond to ``caen_tdc_parsed.pos_x_mm`` (or ``pos_y_mm``) in ``../titan_data/mpet/__init__.py``
@@ -53,7 +53,7 @@ Data -- CAEN 25ps TDC
   - Corresponds to ``caen_tdc_parsed.trigger_count``
 
 Data -- VT2 TDC
-============================
+-----
 
 - **X/Y Position:** Determined via LeCroy 1190 Position Analyzer
   - Correspond to ``pos_data.x`` (or ``y``) in ``../titan_data/mpet/__init__.py``
@@ -68,7 +68,7 @@ Data -- VT2 TDC
     need to specify a ``channel_ids`` to get just one trigger value per ion hit
 
 Ion-Ion Interaction Data Cuts
-============================
+-----
 
 - We want to minimize any ion-ion interaction effects in the trap on results,
   so we discard any data where > N total ions were in the trap together
@@ -78,7 +78,7 @@ Ion-Ion Interaction Data Cuts
 - ONLY works with CAEN 25ps TDC Data
 
 Determining Ion Rates
-============================
+-----
 
 - We want to determine the rate at which ion events are occurring
 - We determine a gating time t (``gating_rate`` [ms]) and determine the number
@@ -90,7 +90,7 @@ Determining Ion Rates
   rate of those events (``num_events/t``) for each gating time window
 
 Pairing Final and Reference Files
-============================
+-----
 
 - For each final file (``Tacc > 0``), we need to pair it with the reference file (``Tacc = 0``) closest to it in time
 
@@ -102,7 +102,7 @@ Pairing Final and Reference Files
 
 
 Output: Ion Rate .csv
-**********
+-----
 
 - A .csv file is printed with the recorded ion rate data:
   - Column 1: Approximate Global Gate Time [ms] (gating window number)*t
@@ -111,7 +111,7 @@ Output: Ion Rate .csv
   - Saved as ``original_MIDAS_filename.mid_ion_rate.csv``
 
 Output:  Main Data .csv
-**********
+-----
 
 - A .csv is printed with the data described on slides 7-9:
   - Column 1: X Position [mm]
@@ -123,7 +123,7 @@ Output:  Main Data .csv
 - Main Data and Ion Rate CSVs are created for each MIDAS file in the input directory 
 
 Output:  File List .csv
-**********
+-----
 
 - A .csv is printed with:
   - Column 1: Addresses of Main File CSVs
