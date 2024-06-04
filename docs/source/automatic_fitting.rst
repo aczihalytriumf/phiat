@@ -12,7 +12,7 @@ Automatic Fitting Overview
   - A .png of the sinusoidal fit of radius data (if Finish Analysis and Sine Curve Fitting are checked)
 
 Usage
-========
+-----
 
 - Open PhIAT.m in MATLAB and at the top of the MATLAB window, click **Run** to open the GUI
 - Click the red **Select file(s) for analysis** button in the top left of the GUI
@@ -34,7 +34,7 @@ Usage
 - Optional: Enter Isotope, Time in Trap, and Date in the top left of the GUI to save this information in the file name
 
 Finish Analysis Overview
-========================
+-----
 
 Checking **Finish Analysis** will determine the final cyclotron frequency of one of the species present in the file.
 
@@ -42,7 +42,7 @@ Outputs:
 - **Data.xlsx:** Contains all relevant fitting information
 
 Create Freq ID Overview
-========================
+-----
 
 Checking **Create Freq ID** will create ``ID_Frequencies.csv``, which contains the following data about every spot in every ‘final’ file:
 
@@ -54,7 +54,7 @@ Checking **Create Freq ID** will create ``ID_Frequencies.csv``, which contains t
 - Cyc Freq: Cyclotron frequencies ⍵c,N
 
 Sine Curve Fitting Overview
-========================
+-----
 
 Checking **Sine Curve Fitting** will determine the final cyclotron frequency of one of the species present in the file by fitting a sinusoid to a spot’s cyclotron frequency at each ``Tacc``.
 
@@ -63,7 +63,7 @@ Outputs:
 - **RadiusSineFit.png:** An image of the Radius vs. ``Tacc`` sinusoid fit
 
 Output: Data.csv
-===============
+-----
 
 - ``Data.csv`` is saved, containing tabs of relevant data:
   1. **Cyc. Freq.:** The final cyclotron frequency, uncertainty, and reduced Chi^2
@@ -76,7 +76,7 @@ If **Sine Curve fitting** is checked, ``Data.csv`` will also contain
 
 
 Mean Shift Clustering
-=====================
+-----
 
 Once **Automatic Fit** is pressed, the X/Y position data of each file is clustered into groups via a Mean Shift algorithm:
 
@@ -91,7 +91,7 @@ The total number of clusters is NOT predetermined and depends on two user choice
   - You will likely need to play around with these parameters to get clusters that represent what you would like/expect
 
 Fitting Clustered Data
-=======================
+-----
 
 - The center of each cluster is determined by a 1D Gaussian fit in X/Y
   - via the Maximum Likelihood method
@@ -101,7 +101,7 @@ Fitting Clustered Data
 - If you have not checked any other boxes in the Automatic Fitting section, this is where the process stops
 
 Reference and Final Spots
-==========================================
+-----
 
 - Each “final” file (Nonzero Tacc) has been paired with a “reference” file (Zero Tacc) in the FileList.csv
 - Based on ordering in FileList.csv, “final” files were fit first, and “reference” files second
@@ -109,14 +109,14 @@ Reference and Final Spots
 
 
 Determining Phase -- Trap Center
-=================================
+-----
 
 - The Trap Center [mm] is a user-defined input; make sure it reflects the most recent trap center determination to a given set of data
 - The Trap Center uncertainty [mm] must be changed in the script itself (lines 556-557)
 - **NOTE:** If using simulated data from `PI_ICR_simulated_data.m`, Trap Center is (0,0)
 
 Finding Number of Turns -- How It Works
-========================================
+-----
 
 - To determine ⍵c, we still need to know the number of turns (i.e. full revolutions) the ion made in the trap
   - N(tacc)
@@ -130,14 +130,14 @@ Finding Number of Turns -- How It Works
 - We then generate a cyclotron frequency (⍵c,N) for every N value
 
 Selecting ⍵c from ⍵c,N -- How It Works
-========================================
+-----
 
 - We need to select one ⍵c from the array of ⍵c,N for each spot
 - The ⍵c closest to ⍵c, guess is selected, and thus is dependent on the user-input for Cyclotron Frequency Guess
 
 
 Radius Sinusoid Fitting -- How It Works
-========================================
+-----
 
 - The radii of the spots should also follow a similar sinusoid
 - A 4-parameter sinusoid is fit to the radius data
