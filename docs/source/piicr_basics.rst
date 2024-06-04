@@ -6,7 +6,15 @@ The PI-ICR technique is a precision mass spectrometry technique. It determines t
 Theory
 **********
 
-formulas here
+.. image:: path/to/your/image.png
+   :align: center
+
+   Figure 1: The cyclotron frequency (⍵c) is determined via the phase difference (ɸc) between two spots with different accumulation times (Tacc). In this figure, 'a' is the distance between te reference and final spots, 'b' is the distance between the center and the reference spot, and 'c' is the distance between the center and the final spot. PhIAT determines the X/Y positions of these spots to find each of their phases. 
+
+.. image:: path/to/your/image.png
+   :align: center
+
+   Figure 2: The relationship between a, b, c, and phi.
 
 Measurement Technique
 **********
