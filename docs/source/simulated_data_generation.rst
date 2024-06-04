@@ -1,5 +1,8 @@
-Overview
+Simulated Data Generation
 ========
+
+Overview
+-----
 
 - **Language:** MATLAB
 - **PI_ICR_simulated_data.m** creates simulated data files based on user-input cyclotron frequencies and accumulation times
@@ -16,7 +19,7 @@ Output
 - One .csv file containing an address list of files, their accumulations times (Taccs), and reference files assignments
 
 User Inputs
-===========
+-----
 
 - **tacc_list:** A list of accumulation times you want data simulated for. One file will be made for each Tacc
 - **new_filename:** Directory (and filename) to be used
