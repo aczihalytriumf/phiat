@@ -1,0 +1,52 @@
+Standard Analysis Procedure
+========
+
+1). Fit shorter Tacc files to determine potential cyclotron frequencies of
+    unknown species
+    
+2). Once species identified, use higher Tacc files to find proper cyclotron
+      frequency of species/ions of interest
+    
+3). Find cyclotron frequency of calibrant ion (separately taken data)
+    
+4). Determine mass excess from interest/calibrant ion frequencies using
+      `freq_to_mass_converter.m`
+
+Analysis Procedure Step 1
+-----
+
+- Determine possible cyclotron frequencies of all spots in files with
+  (relatively) shorter Tacc
+  
+- These Tacc are typically chosen arbitrarily, such that a certain species will
+  NOT always end up at the same phase
+  
+- This is critical, as it would be impossible to identify species via cyclotron frequencies if
+  their spots were at the same phase across a set of files
+  
+- This is done via Create Freq ID and identifying common frequencies
+  across files
+  
+- NOTE: Here, use frequencies derived from AME as guess frequencies based on what is
+  expected in the beam (`TITAN-spreadsheet.xlsx` will be helpful, see end for more details)
+
+Analysis Procedure Step 2
+-----
+
+- These files will have Taccs chosen such that the ion of interest should be at similar angles close
+  to the reference spot angle FOR ALL FILES
+  
+- The guess frequency here will be the frequency of the ion of interest
+  species as determined in step 1
+  
+- The results of the sinusoid fit constitute the “final” cyclotron frequency for
+  the ion of interest
+
+Analysis Procedure Step 3
+-----
+
+- The cyclotron frequency of a calibrant ion is determined using the same
+prescription as step 2
+
+- Since calibrants are precisely known, the guess frequency can be derived
+from AME as in step 1
