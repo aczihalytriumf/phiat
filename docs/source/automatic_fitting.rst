@@ -144,3 +144,10 @@ Radius Sinusoid Fitting -- How It Works
 - This is only used to confirm the data is as expected
 - If the fit is poor, this can be a signal that something is wrong
 - A .png image of both the ⍵c and Radius sinusoid fits is saved (SineFit.png and RadiusSineFit.png)
+
+Systematics -- Phase Cutoff
+-----
+
+- To minimize effects of magnetic field misalignment, a phase cutoff can be applied to cut away any data points with a reference/final phase difference greater than a user-set value (in deg). 
+  - i.e. any data points with final/reference phase > 10 deg here are not incorporated into sinusoid fit.
+  - Only implemented when box is checked.
