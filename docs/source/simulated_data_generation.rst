@@ -5,7 +5,7 @@ Overview
 -----
 
 - **Language:** MATLAB
-- **PI_ICR_simulated_data.m** creates simulated data files based on user-input cyclotron frequencies and accumulation times
+- **TIPS.m** creates simulated data files based on user-input cyclotron frequencies and accumulation times
 
 Input
 -----
